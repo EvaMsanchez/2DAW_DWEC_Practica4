@@ -11,7 +11,8 @@ module miInstituto
         private _peso: number;
 
         // Constructor.
-        constructor (apellido: string, nombre: string, sexo: string, edad: number, altura: number, peso: number)
+        constructor (apellido: string, nombre: string, sexo: string, edad: number, 
+                     altura: number, peso: number)
         {
             this._apellido = apellido;
             this._nombre = nombre;
@@ -69,7 +70,8 @@ module miInstituto
         private _promocion: string;
 
         // Constructor.
-        constructor(apellido: string, nombre: string, sexo: string, edad: number, altura: number, peso: number, promocion: string)
+        constructor(apellido: string, nombre: string, sexo: string, edad: number, 
+                    altura: number, peso: number, promocion: string)
         {
             super(apellido, nombre, sexo, edad, altura, peso);
             this._promocion = promocion;
@@ -110,12 +112,14 @@ module miInstituto
     }
 
 
+    // Clase Formador.
     export class Formador extends Persona
     {
         private _listaCursos: Curso[];
 
         // Constructor
-        constructor (apellido: string, nombre: string, sexo: string, edad: number, altura: number, peso: number, listaCursos: Curso[])
+        constructor (apellido: string, nombre: string, sexo: string, edad: number, 
+                     altura: number, peso: number, listaCursos: Curso[])
         {
             super(apellido, nombre, sexo, edad, altura, peso)
             this._listaCursos = listaCursos;
@@ -156,6 +160,9 @@ let curso2: miInstituto.Curso = new miInstituto.Curso("JavaScript");
 let listaCursos: miInstituto.Curso[] = [curso1, curso2];
 
 // Instancia de Formador.
-let formador: miInstituto.Formador = new miInstituto.Formador("García García", "Alejandra", "mujer", 32, 168, 68, listaCursos);
+let formador: miInstituto.Formador = new miInstituto.Formador("García García", "Alejandra",
+                                                              "mujer", 32, 168, 68, listaCursos);
 
 formador.mostrar();
+
+
